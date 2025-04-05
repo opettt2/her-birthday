@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcccb;
+            padding: 5vw;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .heart {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: red;
+            transform: rotate(45deg);
+            top: -10px;
+            left: 50%;
+            animation: floatDown 10s infinite;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+        @keyframes floatDown {
+            0% {
+                transform: translateY(-100px) rotate(45deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(120vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .content {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 5vw;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease;
+            position: relative;
+            z-index: 1;
+        }
+        img, video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            animation: popIn 1s ease;
+        }
+        .dropdown {
+            margin-top: 20px;
+            text-align: left;
+        }
+        summary {
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        details {
+            background-color: #ffe4e1;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        audio {
+            margin-top: 10px;
+            width: 100%;
+        }
+        p, h1 {
+            word-wrap: break-word;
+        }
+        h1 {
+            word-wrap: break-word;
+            text-align: center;
+            border: 3px solid #ff5e6c;
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background-color: #fff0f3;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    <div class="content">
+        <h1>🎉 Happy Birthday, Dear! 🎂</h1>
+        <p>Saksikan video kesaksian dulu ya wkwk, Enjoy❤️</p>
+        <video controls>
+            <source src="video/WhatsApp Video 2025-04-06 at 00.47.59_84447bef.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="dropdown">
+            <details>
+                <summary>Tolong dibaca ya cantik 😶‍🌫️</summary>
+                <p>Haloo, Selamat ulang tahun yaa, kamu sekarang sudah tua 🥰.
+                    officially bertambah satu umur di tahun ini, aku mengucap syukur aja ke Tuhan kalau hari ini lebih tepatnya kamu masih diberi 1 umur lagi untuk bertumbuh dan berkembang lagi. Wish ku ga yang gimana sih, aku berdoa di tahun ini apa yang kamu wish kan itu dapat terkabulkan either dalam study, pelayanan mu, pekerjaan mu dan planning mu kedepannya yang intinya aku cuma mau liat kamu sukses dalam apa yang kamu kerjakan. 
+                    </p>
+                <p>Kedepannya bakal banyak tantangan dan cobaan yang bakal kamu lewati, tapi aku percaya kamu bisa ngelewatin semua, karena Christine yang kutahu kuat ngelewatin semua tapi sambil nangis" wkwk. Tapi satu hal bahwa, kamu sudah tidak perlu khawatir lagi, aku yang bakal nemani kamu, 
+                    kalau butuh Pundak aku kasi buat bersandar, kalau butuh tempat beristirat, i will be your rest area 24/7, tapi kalau kamu butuh duit, ayo kita cari sama" karena saya juga butuh.</p>
+                <p>Di umur yang baru ini, aku juga cuma mau bilang dont be so hard on yourself, 
+                    jangan terlalu keras sama dirimu untuk hadapi semua dengan topeng, i know you and you know you. youre not alone, ada aku di tim mu sekarang jadi kita hadapi sama", tantanganmu jadi tantangan kita. But yang aku cuma mau bilang adalah, just be you. 
+                    Jadilah Christine yang ngerecokin aku, ngeselin, bawel, touchy dan segala macam yang kamu lakukan, i loved it.</p>
+                <P>Kamu masih punya perjalanan yang Panjang kedepannya, but allow to have part of it all.
+                </P>
+                <p>Mimpimu, visimu dan planning mu akan selalu kudukung selama itu yang menjadi terbaik buat kamu.
+                </p>
+                <p>But anyway, aku cuma mau bilang happy birthday lagi ya, makin sabar, makin jadi Christine yang baik hati ( ga sarkas ya ), makin sayang dan lekat sama Tuhan di setiap perjalannmu, 
+                    terus membagikan kasih Tuhan ke orang lain melalui empati dan simpati yang aku suka.</p>
+                <p>Lots of loves from you big boy. Opet❤️</p>
+                <audio controls>
+                    <source src="audio/20250406_012927.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </details>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        const duration = 8 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        const interval = setInterval(function() {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+            });
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+            });
+        }, 250);
+
+        // Floating hearts generator
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
